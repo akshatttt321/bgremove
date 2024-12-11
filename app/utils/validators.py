@@ -3,8 +3,6 @@ from PIL import Image
 import io
 
 def validate_input(data):
-    response = requests.get(data['image_url'])
-    original_image = Image.open(io.BytesIO(response.content))
 
     if not all(key in data for key in ['image_url', 'bounding_box']):
         return {"valid": False, "message": "Missing required fields"}
@@ -13,6 +11,7 @@ def validate_input(data):
         response = requests.head(data['image_url'], timeout=5)
         if response.status_code != 200:
             return {"valid": False, "message": "Invalid image URL"}
+        original_image = Image.open(io.BytesIO(response.content))
     except:
         return {"valid": False, "message": "Could not access image URL"}
     
