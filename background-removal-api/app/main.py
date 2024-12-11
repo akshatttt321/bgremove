@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify
-from .services.image_processor import process_image
+from services.image_processor import process_image
 from .services.storage_service import upload_cloudinary
 from .utils.validators import validate_input
 
