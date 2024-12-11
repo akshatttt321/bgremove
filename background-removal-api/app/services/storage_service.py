@@ -21,10 +21,9 @@ cloudinary.config(
 
 
 def upload_cloudinary(processed_image):
-    processed_image = processed_image.convert("RGB")
     try:
         img_byte_arr = BytesIO()
-        processed_image.save(img_byte_arr, format='JPEG') 
+        processed_image.save(img_byte_arr, format='PNG') 
         img_byte_arr.seek(0) 
         processed_url = cloudinary.uploader.upload(img_byte_arr)
         return processed_url

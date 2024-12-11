@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify
 from services.image_processor import process_image
-from .services.storage_service import upload_cloudinary
-from .utils.validators import validate_input
+from services.storage_service import upload_cloudinary
+from utils.validators import validate_input
 
 app = Flask(__name__)
 
@@ -32,3 +32,6 @@ def remove_background():
     
     except Exception as e:
         return jsonify({"error": str(e)}), 500
+    
+if __name__ == '__main__':
+    app.run(debug=True)
