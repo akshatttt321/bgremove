@@ -1,3 +1,13 @@
+---
+title: Bgremove
+emoji: 🐠
+colorFrom: blue
+colorTo: indigo
+sdk: docker
+pinned: false
+license: mit
+short_description: Background removal API in Flash
+---
 # Background Removal API
 
 This Space provides an API for background removal using a Python-based application.
