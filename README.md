@@ -1,4 +1,3 @@
-<!--
 ---
 title: Bgremove
 emoji: 🐠
@@ -9,7 +8,6 @@ pinned: false
 license: mit
 short_description: Background removal API in Flash
 ---
--->
 
 
 # Background Removal API Submission by Team Chill guys
