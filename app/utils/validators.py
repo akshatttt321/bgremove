@@ -8,7 +8,7 @@ def validate_input(data):
         return {"valid": False, "message": "Missing required fields"}
     
     try:
-        response = requests.head(data['image_url'], timeout=5)
+        response = requests.get(data['image_url'], timeout=5)
         if response.status_code != 200:
             return {"valid": False, "message": "Invalid image URL"}
         original_image = Image.open(io.BytesIO(response.content))
