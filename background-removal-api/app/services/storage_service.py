@@ -1,12 +1,10 @@
 import cloudinary 
 import cloudinary.uploader
 import cloudinary.api
-from dotenv import load_dotenv
 import os
 from io import BytesIO
 from PIL import Image
 
-load_dotenv('/background-removal-api/var.env')
 
 cloud_name = os.getenv('CLOUD_NAME')
 api_key = os.getenv('API_KEY')
