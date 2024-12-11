@@ -1,0 +1,6 @@
+flask
+rembg
+opencv-python-headless
+pillow
+boto3
+requests

@@ -1,0 +1,12 @@
+
+.env
+
+**/__pycache__/
+
+*.pyc
+*.pyo
+*.pyd
+
+/app/services/__pycache__/
+/app/utils/__pycache__/
+/bg/
